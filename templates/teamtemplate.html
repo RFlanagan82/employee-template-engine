@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html lang="en">
+    
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,7 +15,7 @@
                 font-family: 'Raleway', sans-serif;
             };
         </style>
-        
+
     </head>
     <body style= "background-image: url(./light-grey-terrazzo.png); background-repeat: repeat;">
         <div class="jumbotron jumbotron-fluid" style="background-color:black;text-align:center;">
@@ -21,7 +23,15 @@
               <h1 class="display-4" h1 style="color:azure">Employee Team Roster</h1>
               <p class="lead" p style="color: azure">Dynamically written as employees are added.</p>
             </div>
-          </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="team-area col-12 d-flex justify-content-center">
+                    {{ team }}
+                </div>
+            </div>
+        </div>
 
         <footer class="row" id="footer"> <!--Footer Row Content-->
             <!--<div class="card"><!--The content in this div gets wrapped in a card-->
