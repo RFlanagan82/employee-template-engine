@@ -14,32 +14,32 @@ const render = require("./lib/htmlRenderer");
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
 
-function initialManagerPrompt() {
+function managerPrompt() {
     return inquirer.managerPrompt([
         {
             type: "input",
             message: "What is your manager's name?",
-            name: "mgrName" 
+            name: "name" 
         },
         {
             type: "input",
             message: "What is your manager's id?",
-            name: "mgrId"
+            name: "id"
         },
         {
             type: "input",
             message: "What is your manager's email?",
-            name: "mgrEmail"
+            name: "email"
         },
         {
             type: "input",
             message: "What is your manager's office number?",
-            name: "mgrOfficeNum"
+            name: "officeNumber"
         },
         {
             type: "list",
             message: "Which type of team member would you like to add?",
-            name: "employee-selection-type",
+            name: "role",
             choices: [
                 "Engineer",
                 "Intern",
@@ -55,27 +55,27 @@ function engineerPrompt() {
         {
             type: "input",
             message: "What is your engineer's name?",
-            name: "engName" 
+            name: "name" 
         },
         {
             type: "input",
             message: "What is your engineer's id?",
-            name: "engId"
+            name: "id"
         },
         {
             type: "input",
             message: "What is your engineer's email?",
-            name: "engEmail"
+            name: "email"
         },
         {
             type: "input",
             message: "What is your engineer's Github username?",
-            name: "engGitHubName"
+            name: "github"
         },
         {
             type: "list",
             message: "Which type of team member would you like to add?",
-            name: "employee-selection-type",
+            name: "role",
             choices: [
                 "Engineer",
                 "Intern",
@@ -90,27 +90,27 @@ function internPrompt() {
         {
             type: "input",
             message: "What is your intern's name?",
-            name: "intName" 
+            name: "name" 
         },
         {
             type: "input",
             message: "What is your intern's id?",
-            name: "intId"
+            name: "id"
         },
         {
             type: "input",
             message: "What is your intern's email?",
-            name: "intEmail"
+            name: "email"
         },
         {
             type: "input",
             message: "What is your intern's school?",
-            name: "intSchool"
+            name: "school"
         },
         {
             type: "list",
             message: "Which type of team member would you like to add?",
-            name: "employee-selection-type",
+            name: "role",
             choices: [
                 "Engineer",
                 "Intern",
@@ -124,6 +124,9 @@ function internPrompt() {
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
 
+render(){
+    
+};
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the
 // `output` folder. You can use the variable `outputPath` above target this location.
