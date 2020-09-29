@@ -14,48 +14,53 @@ const render = require("./lib/htmlRenderer");
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
+const employeesArray = [];
+
 
 console.log("Please build your team.")
 
-
-function managerPrompt() {
-    return inquirer.managerPrompt([
+//Create a basic prompt function that takes in the same questions regardless of employee type.
+basicPrompt()
+function basicPrompt(userInput) {
+    inquirer.basicPrompt([
         {
             type: "input",
-            message: "What is your manager's name?",
+            message: "Enter employee name.",
             name: "name" 
         },
         {
             type: "input",
-            message: "What is your manager's id?",
+            message: "Please enter employee id.",
             name: "id"
         },
         {
             type: "input",
-            message: "What is your manager's email?",
+            message: "Now enter employee email.",
             name: "email"
-        },
-        {
-            type: "input",
-            message: "What is your manager's office number?",
-            name: "officeNumber"
         },
         {
             type: "list",
             message: "Which type of team member would you like to add?",
             name: "role",
             choices: [
+                "Manager",
                 "Engineer",
                 "Intern",
                 "I don't want to add any more team members."
             ]
         },
-    ])
+    ]).then(function(res){
+        uniquePrompt(res);
+    }).catch(function(err){
+        if(err) throw err;
+        console.log("basic prompt answers have been logged")
+    })
 };
 
+//Define function for special case employee type questions
+function uniquePrompt() {
 
-function engineerPrompt() {
-    return inquirer.engineerPrompt ([
+    inquirer.uniquePrompt ([
         {
             type: "input",
             message: "What is your engineer's name?",
@@ -89,65 +94,16 @@ function engineerPrompt() {
     ]);
 };
 
-function internPrompt() {
-    return inquirer.internPrompt ([
-        {
-            type: "input",
-            message: "What is your intern's name?",
-            name: "name" 
-        },
-        {
-            type: "input",
-            message: "What is your intern's id?",
-            name: "id"
-        },
-        {
-            type: "input",
-            message: "What is your intern's email?",
-            name: "email"
-        },
-        {
-            type: "input",
-            message: "What is your intern's school?",
-            name: "school"
-        },
-        {
-            type: "list",
-            message: "Which type of team member would you like to add?",
-            name: "role",
-            choices: [
-                "Engineer",
-                "Intern",
-                "I don't want to add any more team members."
-            ]
-        },
-    ]);
-};
 
 // After the user has input all employees desired, call the `render` function (required above) and pass in an array containing all employee objects; the `render` function will generate and return a block of HTML including templated divs for each employee!
 
-        // function render(){
-        //     {
-        //         inquirer.prompt(managerPrompt),
-        //         inquirer.prompt(engineerPrompt),
-        //         inquirer.prompt(internPrompt);
-        //     }
-            
-        //     .then(inputs => {
-        //         const response = Employee(inputs);
-        //         console.log(inputs);
-        //     })
-        //     .catch((err) =>{
-        //         console.log(err);
-        //     });
-        // };
+render();
 
 //Now write it to a file named `team.html` in thw `output` folder. 
 //You can use the variable `outputPath` above target this location.
 // Hint: you may need to check if the `output` folder exists and create it if it
 // does not.
 
-        //render();
 
 
 // After you have your html, you're now ready to create an HTML file using the HTML
@@ -162,3 +118,10 @@ function internPrompt() {
 // for further information. Be sure to test out each class and verify it generates an
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided `render` function to work! ```
+
+
+// {
+//     type: "input",
+//     message: "What is your office number?",
+//     name: "officeNumber"
+// },
