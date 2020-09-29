@@ -9,19 +9,15 @@ const fs = require("fs");
 const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
+//Need to create a variable that will be used as a function later that will dynamically build the HTML page
 const render = require("./lib/htmlRenderer");
 
-
-// Write code to use inquirer to gather information about the development team members,
-// and to create objects for each team member (using the correct classes as blueprints!)
+//Need to create an array containing all employee objects;
 const employeesArray = [];
 
-
-//console.log("Please build your team.")
-
-//Create a basic prompt function that takes in the same questions regardless of employee type.
-basicEmployeePrompt()
-function basicEmployeePrompt(userInput) {
+//Create a standard employee prompt function using inquirer that takes in the same questions regardless of employee type.
+employeePrompt()
+function employeePrompt() {
     inquirer.prompt([
         {
             type: "input",
@@ -76,6 +72,8 @@ function uniquePrompt(userReply) {
             const manager = new Manager(userReply.name, userReply.id, userReply.email, uniqueReply.officeNumber)
             //push to employees array
             employeesArray.push(manager);
+            //Bring in the StopRoster function to ask if they are done adding employees and to write the html if so.
+            stopRoster();
         }).catch(function(err){
             if(err) throw err
         })
@@ -92,6 +90,8 @@ function uniquePrompt(userReply) {
             const engineer = new Engineer(userReply.name, userReply.id, userReply.email, uniqueReply.github)
             //push to employees array
             employeesArray.push(engineer);
+            //Bring in the StopRoster function to ask if they are done adding employees and to write the html if so.
+            stopRoster();
         }).catch(function(err){
             if(err) throw err
         })
@@ -108,29 +108,40 @@ function uniquePrompt(userReply) {
             const intern = new Intern(userReply.name, userReply.id, userReply.email, uniqueReply.school)
             //push to employees array
             employeesArray.push(intern);
+            //Bring in the StopRoster function to ask if they are done adding employees and to write the html if so.
+            stopRoster();
         }).catch(function(err){
             if(err) throw err
         })
     }
 };
-// After the user has input all employees desired, call the `render` function (required above) and pass in an array containing all employee objects; the `render` function will generate and return a block of HTML including templated divs for each employee
 
-//Now write it to a file named `team.html` in thw `output` folder. 
-//You can use the variable `outputPath` above target this location.
-// Hint: you may need to check if the `output` folder exists and create it if it
-// does not.
+//Need to create a function that allows the user to cease adding employees if they want
+function stopRoster(){
+    inquirer.prompt([
+        {
+            type: "confirm",
+            message: "Would you like to stop adding employees at this time?",
+            name: "stop"
+        }
 
+    // After the user has input all employees desired, call the `render` function (required above) and pass in an  the `render` function will generate and return a block of HTML including templated divs for each employee
 
+    ]).then(function(res){
+        if(res.stop){
+            const outputEmployeeData = render(employeesArray);
 
-// After you have your html, you're now ready to create an HTML file using the HTML
-// returned from the `render` function. 
+        //Now write it to a file named `team.html` in thw `output` folder. 
+        //You can use the variable `outputPath` above target this location.
+            fs.writeFile(outputPath, outputEmployeeData, function(err){
+                if (err) throw err;
+            })
+        // they'll go straight back to the employeePrompt function if they choose to continue adding employees.
+        } else {
+            employeePrompt();
+        }
+    })
+};
 
-
-
-// HINT: make sure to build out your classes first! Remember that your Manager, Engineer,
-// and Intern classes should all extend from a class named Employee; see the directions
-// for further information. Be sure to test out each class and verify it generates an
-// object with the correct structure and methods. This structure will be crucial in order
-// for the provided `render` function to work! ```
 
 
