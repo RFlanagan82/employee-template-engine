@@ -6,8 +6,14 @@ This team generator command line application will prompt the user for informatio
 ## Contents
 This application contains the following elements:
 
+* Develop directory which includes:
 * [app.js](https://github.com/RFlanagan82/good-readme-generator/blob/master/index.js)
-* [generateMarkdown.js](https://github.com/RFlanagan82/good-readme-generator/blob/master/utils/generateMarkdown.js)
+* [libary](https://github.com/RFlanagan82/employee-template-engine/tree/master/develop/lib)
+* [templates](https://github.com/RFlanagan82/employee-template-engine/tree/master/develop/templates)
+* [test](https://github.com/RFlanagan82/employee-template-engine/tree/master/develop/test)
+* [output](https://github.com/RFlanagan82/employee-template-engine/tree/master/develop/output)
+* [assets](https://github.com/RFlanagan82/employee-template-engine/tree/master/develop/assets)
+
 * [Instructions.md] - Link referenced in Installation Requirements
 * [package.JSON]
 * [package-lock.JSON]
@@ -32,9 +38,16 @@ To start, clone this repo and run your terminal from app.js, on the command line
 You will then be prompted to add in your employees information and be asked unique questions based on the job type you've assigned them via the prompt.
 
 ## Credits & Contributions
+On 9-28-2020, I worked with classmate Jonathan Canales and Sami Sully who, as mentioned in the Tests section, helped me in formatting my methods on employee.js to pass. They helped me better understand what exactly the employee.test,js needed in order for the tests on that js. file to pass.
+
+Once I understood the formatting I was able to configure the other .js files so that they would also pass.
+
+On 9-29-2020 in our afternoon office hours, classmate Alex Flemming helped me better understand how to structure my function and conditional statements for the unique prompts. This led me to see that it would be better to structure them where I created unique variables for Manager, Engineer, and Intern; which I could then use to tie their specifically unique question to those specific variabls once I pushed to my employeesArray.
 
 ## Resources
 The resources I leveraged mainly came from re-reviewing the gt-ft exercises in Unit 10 - Object Oriented Programming.
+
+I made a screengrab of the questions displayed in [Jonathan Watson's demo](https://github.com/RFlanagan82/employee-template-engine/blob/master/Assets/Team-member-Roster-Engine_Questions.png)
 
 I also leveraged a YouTube video entitled JavaScript ES6 / ES2015 [04]
 *[04](https://youtu.be/RBLIm5LMrmc)
