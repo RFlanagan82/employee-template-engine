@@ -57,7 +57,7 @@ I also leveraged a YouTube video entitled JavaScript ES6 / ES2015 [04]
 All test.js files are contained within the develop directory under [test](https://github.com/RFlanagan82/employee-template-engine/tree/master/develop/test)
 
 At first I had some difficulties getting my test to pass on employee.test.js as shown here:
-![](develop/assets/Testing-issues-on-Employee.test.js.png)
+![](./develop/assets/Testing-issues-on-Employee.test.js.png)
 
 After working with my classmates together in Discord, I was able to figure out how to write my .js files so that getName(), get(Email), and getId() functions worked.
 
