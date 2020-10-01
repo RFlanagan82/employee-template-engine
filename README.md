@@ -47,7 +47,8 @@ On 9-29-2020 in our afternoon office hours, classmate Alex Flemming helped me be
 ## Resources
 The resources I leveraged mainly came from re-reviewing the gt-ft exercises in Unit 10 - Object Oriented Programming.
 
-I made a screengrab of the questions displayed in [Jonathan Watson's demo](https://github.com/RFlanagan82/employee-template-engine/blob/master/Assets/Team-member-Roster-Engine_Questions.png)
+I made a screengrab of the questions displayed in Jonathan Watson's demo. 
+![](.develop/assets/Team-Member-Roster-Engine_Questions.png)
 
 I also leveraged a YouTube video entitled JavaScript ES6 / ES2015 [04]
 *[04](https://youtu.be/RBLIm5LMrmc)
@@ -56,14 +57,14 @@ I also leveraged a YouTube video entitled JavaScript ES6 / ES2015 [04]
 All test.js files are contained within the develop directory under [test](https://github.com/RFlanagan82/employee-template-engine/tree/master/develop/test)
 
 At first I had some difficulties getting my test to pass on employee.test.js as shown here:
-[Employee.test.js](https://github.com/RFlanagan82/employee-template-engine/blob/master/Assets/Testing-issues-on-Employee.test.js.png)
+![](develop/assets/Testing-issues-on-Employee.test.js.png)
 
 After working with my classmates together in Discord, I was able to figure out how to write my .js files so that getName(), get(Email), and getId() functions worked.
 
 I then replicated the process for Engineer.js, Intern.js, and Manager.js.
 
 Doing so allowed the tests to pass as shown here:
-[Passing tests](https://github.com/RFlanagan82/employee-template-engine/blob/master/Assets/report-showing-passing-tests.png)
+![](./develop/assets/report-showing-passing-tests.png)
 
 ## Badge
 https://img.shields.io/badge/RFlanagan82-Do%20it%20for%20the%20users-green
