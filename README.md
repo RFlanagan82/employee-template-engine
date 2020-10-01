@@ -64,7 +64,7 @@ After working with my classmates together in Discord, I was able to figure out h
 I then replicated the process for Engineer.js, Intern.js, and Manager.js.
 
 Doing so allowed the tests to pass as shown here:
-![](.develop/assets/Testing-issues-on-Employee.test.js.png)
+![](./develop/assets/Testing-issues-on-Employee.test.js.png)
 
 ## Badge
 https://img.shields.io/badge/RFlanagan82-Do%20it%20for%20the%20users-green
