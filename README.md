@@ -48,9 +48,9 @@ On 9-29-2020 in our afternoon office hours, classmate Alex Flemming helped me be
 The resources I leveraged mainly came from re-reviewing the gt-ft exercises in Unit 10 - Object Oriented Programming.
 
 I made a screengrab of the questions displayed in Jonathan Watson's demo. 
-![](.develop/assets/Team-Member-Roster-Engine_Questions.png)
+![](./develop/assets/Team-Member-Roster-Engine_Questions.png)
 
-I also leveraged a YouTube video entitled JavaScript ES6 / ES2015 [04]
+I also leveraged a YouTube video entitled JavaScript ES6 / ES2015
 *[04](https://youtu.be/RBLIm5LMrmc)
 
 ## Tests
