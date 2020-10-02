@@ -70,7 +70,7 @@ Doing so allowed the tests to pass as shown here:
 ![](./develop/assets/report-showing-passing-tests.png)
 
 ## Badge
-https://img.shields.io/badge/RFlanagan82-Do%20it%20for%20the%20users-green
+![]https://img.shields.io/badge/RFlanagan82-Do%20it%20for%20the%20users-green
 
 ## License
 MIT Copyright 2020 - Ryan Flanagan
