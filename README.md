@@ -3,6 +3,9 @@
 ## Description
 This team generator command line application will prompt the user for information about the team manager and then information about the team members. The user can input any number of team members, and they may be a mix of engineers and interns.
 
+## App Demonstration
+[Watch the video of this application in use here:](https://drive.google.com/file/d/1tvE6aTl9xUIEOJMt8e1oy_r60CRwq02Y/view)
+
 ## Contents
 This application contains the following elements:
 
@@ -67,7 +70,7 @@ Doing so allowed the tests to pass as shown here:
 ![](./develop/assets/report-showing-passing-tests.png)
 
 ## Badge
-https://img.shields.io/badge/RFlanagan82-Do%20it%20for%20the%20users-green
+![](https://img.shields.io/badge/RFlanagan82-Do%20it%20for%20the%20users-green)
 
 ## License
 MIT Copyright 2020 - Ryan Flanagan
